@@ -179,15 +179,15 @@ body {
     margin-bottom: 27pt;
     padding-top: 3.5pt;
     position: relative;
-    border-top: 1pt solid #000000; }
+    border-top: 1.25pt solid #000000; }
     .cover-page-header-company::before {
       content: '';
       position: absolute;
-      top: -3pt;
+      top: -4pt;
       left: 0;
       display: block;
       width: 100%;
-      border-top: 1pt solid #000000; }
+      border-top: 1.25pt solid #000000; }
     .cover-page-header-company-title {
       margin-bottom: 4pt;
       font-size: 12pt;
@@ -205,8 +205,8 @@ body {
     padding-top: 5.5pt;
     padding-bottom: 6pt;
     margin-bottom: 46pt;
-    border-top: 1pt solid #000000;
-    border-bottom: 1pt solid #000000; }
+    border-top: 1.25pt solid #000000;
+    border-bottom: 1.25pt solid #000000; }
     .cover-page-header-type-title {
       margin-bottom: 4pt;
       font-size: 15pt;
@@ -222,8 +222,8 @@ body {
     margin-bottom: 55pt;
     padding-top: 7pt;
     padding-bottom: 7pt;
-    border-top: 1pt solid #000000;
-    border-bottom: 1pt solid #000000; }
+    border-top: 1.25pt solid #000000;
+    border-bottom: 1.25pt solid #000000; }
     .cover-page-header-team-title {
       margin-bottom: 4pt;
       font-size: 18pt;
@@ -299,7 +299,7 @@ body {
       margin-bottom: 25pt;
       padding-top: 10pt;
       max-width: 223pt;
-      border-top: 1pt solid #000;
+      border-top: 1.25pt solid #000;
       text-align: center; }
       .cover-page-main-amount-header-title {
         margin-bottom: 6pt;
@@ -319,14 +319,15 @@ body {
         text-align: center; }
         .cover-page-main-amount-main-list-item {
           font-size: 8pt;
-          font-weight: 600; }
-          .cover-page-main-amount-main-list-item-title {
-            margin-bottom: 3.5pt; }
+          font-weight: 500; }
+          .cover-page-main-amount-main-list-item.title {
+            margin-bottom: 3.5pt;
+            font-weight: 600; }
   .cover-page-main-created {
     margin: 0 auto;
     max-width: 108pt;
     padding-top: 8.5pt;
-    border-top: 1pt solid #000;
+    border-top: 1.25pt solid #000;
     text-align: center; }
     .cover-page-main-created-title {
       margin-bottom: 6pt;
@@ -360,9 +361,9 @@ body {
     letter-spacing: -0.12px; }
 .moment-chart {
   padding-top: 13pt;
-  margin-bottom: 6pt;
+  margin-bottom: 0;
   text-align: center;
-  border: 1px solid #000000;
+  border: 1.25pt solid #000000;
   overflow: hidden; }
   .moment-chart:not(:last-of-type) {
     margin-bottom: 25pt; }
@@ -379,6 +380,7 @@ body {
     letter-spacing: -0.13px; }
   .moment-chart-chart {
     margin: 0 auto;
+    margin-top: -20pt;
     width: 97% !important;
     height: 99% !important; }
   .moment-chart-legend {
@@ -409,7 +411,7 @@ body {
         font-weight: 400;
         letter-spacing: -0.12px; }
 .moment-super {
-  margin-top: 44pt;
+  margin-top: 19pt;
   display: inline-block;
   padding-top: 6pt;
   border-top: .25pt solid #000000; }
@@ -443,9 +445,11 @@ body {
     letter-spacing: -0.12px; }
 .evaluation-chart {
   padding-top: 13pt;
+  padding-left: 5pt;
+  padding-right: 20pt;
   margin-bottom: 6pt;
   text-align: center;
-  border: 1px solid #000000;
+  border: 1.25pt solid #000000;
   overflow: hidden; }
   .evaluation-chart:not(:last-of-type) {
     margin-bottom: 25pt; }
@@ -466,7 +470,8 @@ body {
     width: 97% !important;
     height: 99% !important; }
   .evaluation-chart-legend {
-    margin: 12pt 10pt;
+    margin: 12pt 5pt;
+    margin-right: -10pt;
     padding: 12pt;
     display: flex;
     align-items: center;
@@ -529,7 +534,7 @@ body {
   padding-top: 13pt;
   margin-bottom: 6pt;
   text-align: center;
-  border: 1px solid #000000;
+  border: 1.25pt solid #000000;
   overflow: hidden; }
   .development-chart:not(:last-of-type) {
     margin-bottom: 25pt; }
@@ -619,7 +624,7 @@ body {
   padding-top: 13pt;
   margin-bottom: 0;
   text-align: center;
-  border: 1px solid #000000;
+  border: 1.25pt solid #000000;
   overflow: hidden; }
   .performance-chart:not(:last-of-type) {
     margin-bottom: 25pt; }
