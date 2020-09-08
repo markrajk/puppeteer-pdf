@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cover page</title>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+</head>
+
+<body class="performance">
+
+ <div class="performance-caption">
+  <div class="performance-caption-main">
+   <p class="performance-caption-main-title">Team Members Performance</p>
+   <p class="performance-caption-main-text">
+    These charts describe how team members are doing. These values present the averages of all given peer to peer
+    reviews during the last 12 weeks and the trends in % describe last 12 weeks compared to the 12 weeks before it.
+   </p>
+  </div>
+  <p class="performance-caption-chart">Chart 5</p>
+ </div>
+
+ <div class="performance-chart">
+  <p class="performance-chart-title">Attitude</p>
+  <p class="performance-chart-text">Averages of peer to peer feedbacks of the period 1.9.2020 - 1.9.2020</p>
+  <div class="performance-chart-chart" id="chart-01"></div>
+ </div>
+
+ <div class="performance-caption">
+  <div class="performance-caption-main">
+   <p class="performance-caption-main-text">&nbsp;</p>
+  </div>
+  <p class="performance-caption-chart">Chart 6</p>
+ </div>
+
+ <div class="performance-chart">
+  <p class="performance-chart-title">Productivity</p>
+  <p class="performance-chart-text">Averages of peer to peer feedbacks of the period 1.9.2020 - 1.9.2020</p>
+  <div class="performance-chart-chart" id="chart-02"></div>
+ </div>
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript">
+  google.charts.load("current", {
+   packages: ["corechart"]
+  });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+   var data01 = google.visualization.arrayToDataTable([
+    ["Element", "Amount", {
+     role: 'style'
+    }, {
+     role: 'annotation'
+    }],
+    ["Johan Friedhelm", 3.2, "rgb(7, 72, 127)", '+18%'],
+    ["Jörgen Pilot", 3.8, "rgb(129, 129, 129)", '+18%'],
+    ["Mathias Franz", 4.5, "rgb(85, 154, 25)", '+20%'],
+    ["Andrew Cooper", 3.7, "rgb(181, 181, 181)", '+20%'],
+    ["Angelo Merte", 3.7, "rgb(247, 171, 49)", '+20%'],
+    ["Angelo Merte", 3.7, "rgb(255, 206, 0)", '+20%'],
+    ["Mathias Franz", 3.7, "rgb(104, 106, 103)", '+20%'],
+   ]);
+
+   var data02 = google.visualization.arrayToDataTable([
+    ["Element", "Amount", {
+     role: 'style'
+    }, {
+     role: 'annotation'
+    }],
+    ["Johan Friedhelm", 3.2, "rgb(7, 72, 127)", '+18%'],
+    ["Jörgen Pilot", 3.8, "rgb(129, 129, 129)", '+18%'],
+    ["Mathias Franz", 4.5, "rgb(85, 154, 25)", '+20%'],
+    ["Andrew Cooper", 3.7, "rgb(181, 181, 181)", '+20%'],
+    ["Angelo Merte", 3.7, "rgb(247, 171, 49)", '+20%'],
+    ["Angelo Merte", 3.7, "rgb(255, 206, 0)", '+20%'],
+    ["Mathias Franz", 3.7, "rgb(104, 106, 103)", '+20%'],
+   ]);
+
+   var view01 = new google.visualization.DataView(data01);
+   var view02 = new google.visualization.DataView(data02);
+
+   var options = {
+    backgroundColor: {
+     fill: 'transparent'
+    },
+    width: '100%',
+    height: 300,
+    chartArea: {
+     height: '75%',
+    },
+    bar: {
+     groupWidth: "60%"
+    },
+    legend: {
+     position: "none"
+    },
+    hAxis: {
+     baseline: 1,
+     ticks: [1, 2, 3, 4, 5]
+    },
+    vAxis: {
+     textStyle: {
+      fontSize: 9.5 // or the number you want
+     }
+    }
+   };
+   var chart01 = new google.visualization.BarChart(document.getElementById("chart-01"));
+   var chart02 = new google.visualization.BarChart(document.getElementById("chart-02"));
+   chart01.draw(view01, options);
+   chart02.draw(view02, options);
+  }
+  //=============================================
+  //=============================================
+  // google.charts.load("current", {
+  //  packages: ['corechart']
+  // });
+  // google.charts.setOnLoadCallback(drawChart);
+
+  // function drawChart() {
+  // var data01 = google.visualization.arrayToDataTable([
+  //  ["Element", "Amount", {
+  //   role: 'style'
+  //  }, {
+  //   role: 'annotation'
+  //  }],
+  //  ["Attitude", 3.2, "rgb(7, 72, 127)", '+18%'],
+  //  ["Productivity", 3.8, "rgb(129, 129, 129)", '+18%'],
+  //  ["Teamworking", 4.5, "rgb(85, 154, 25)", '+20%'],
+  //  ["Feeling", 3.7, "rgb(181, 181, 181)", '+20%'],
+  //  ["Organizing", 3.7, "rgb(247, 171, 49)", '+20%'],
+  //  ["Average", 3.7, "rgb(129, 129, 129)", '+20%'],
+  // ]);
+
+  //  var data02 = google.visualization.arrayToDataTable([
+  //   ["Element", "Amount", {
+  //    role: 'style'
+  //   }, {
+  //    role: 'annotation'
+  //   }],
+  //   ["Team lead 1", 3.2, "rgb(7, 72, 127)", '+18%'],
+  //   ["Team lead 2", 3.8, "rgb(129, 129, 129)", '+18%'],
+  //   ["Custom Q1", 4.5, "rgb(85, 154, 25)", '+20%'],
+  //   ["Custom Q1", 3.7, "rgb(181, 181, 181)", '+20%'],
+  //   ["Custom Q1", 3.7, "rgb(247, 171, 49)", '+20%'],
+  //  ]);
+
+  //  var view01 = new google.visualization.DataView(data01);
+  //  var view02 = new google.visualization.DataView(data02);
+
+  // var options = {
+  //  width: '100%',
+  //  height: 250,
+  //  chartArea: {
+  //   width: '90%',
+  //  },
+  //  bar: {
+  //   groupWidth: "65%"
+  //  },
+  //  legend: {
+  //   position: "none"
+  //  },
+  //  vAxis: {
+  //   baseline: 1,
+  //   ticks: [1, 2, 3, 4, 5]
+  //  }
+  // };
+  //  var chart01 = new google.visualization.ColumnChart(document.getElementById("chart-01"));
+  //  var chart02 = new google.visualization.ColumnChart(document.getElementById("chart-02"));
+  //  chart01.draw(view01, options);
+  //  chart02.draw(view02, options);
+  // }
+ </script>
+
+</body>
+
+</html>

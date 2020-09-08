@@ -8,8 +8,14 @@ canvas {
 
 body {
   position: relative;
-  padding-bottom: 100pt;
-  font-family: 'Roboto', sans-serif; }
+  padding: 70pt 60pt;
+  font-family: 'Inter', sans-serif; }
+  body.cover-page, body.moment {
+    padding: 89pt 63pt;
+    padding-bottom: 0;
+    color: #000000; }
+  body .development {
+    padding-top: 79pt; }
 
 .header {
   display: flex;
@@ -147,3 +153,500 @@ body {
     color: #4e4e4e; }
     .footer-text span {
       font-weight: bold; }
+
+.size-test {
+  min-height: 701pt;
+  height: 100%;
+  width: 100%;
+  border: solid 1px #707070;
+  background-color: #f7f7f7; }
+  .size-test-title {
+    padding-top: 119pt;
+    font-size: 36pt;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4e4e4e; }
+
+.cover-page-header {
+  margin: 0 auto;
+  max-width: 468pt;
+  text-align: center; }
+  .cover-page-header-company {
+    margin-bottom: 27pt;
+    padding-top: 3.5pt;
+    position: relative;
+    border-top: 1pt solid #000000; }
+    .cover-page-header-company::before {
+      content: '';
+      position: absolute;
+      top: -3pt;
+      left: 0;
+      display: block;
+      width: 100%;
+      border-top: 1pt solid #000000; }
+    .cover-page-header-company-title {
+      margin-bottom: 4pt;
+      font-size: 12pt;
+      font-weight: 700;
+      line-height: 1.25;
+      text-transform: uppercase; }
+    .cover-page-header-company-info {
+      font-size: 10pt;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: normal; }
+  .cover-page-header-type {
+    margin: 0 auto;
+    max-width: 165pt;
+    padding-top: 5.5pt;
+    padding-bottom: 6pt;
+    margin-bottom: 46pt;
+    border-top: 1pt solid #000000;
+    border-bottom: 1pt solid #000000; }
+    .cover-page-header-type-title {
+      margin-bottom: 4pt;
+      font-size: 15pt;
+      font-weight: 700; }
+    .cover-page-header-type-info {
+      font-size: 8pt;
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.12px; }
+  .cover-page-header-team {
+    max-width: 224pt;
+    margin: 0 auto;
+    margin-bottom: 55pt;
+    padding-top: 7pt;
+    padding-bottom: 7pt;
+    border-top: 1pt solid #000000;
+    border-bottom: 1pt solid #000000; }
+    .cover-page-header-team-title {
+      margin-bottom: 4pt;
+      font-size: 18pt;
+      font-weight: 700; }
+    .cover-page-header-team-info {
+      font-size: 8pt;
+      font-weight: 400;
+      letter-spacing: -0.12px; }
+.cover-page-main {
+  width: 100%; }
+  .cover-page-main-team {
+    margin: 0 auto;
+    margin-bottom: 18pt;
+    width: 100%;
+    max-width: 400pt;
+    height: 160pt;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center; }
+    .cover-page-main-team-info {
+      width: 121pt;
+      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap; }
+      .cover-page-main-team-info-list {
+        margin-bottom: 13pt;
+        list-style: none;
+        text-align: center; }
+        .cover-page-main-team-info-list-item {
+          font-size: 7.3pt;
+          font-weight: 400;
+          line-height: 1.31;
+          letter-spacing: -0.11px; }
+          .cover-page-main-team-info-list-item.title {
+            margin-bottom: 3pt;
+            font-size: 8pt;
+            font-weight: 600;
+            letter-spacing: normal; }
+    .cover-page-main-team-members {
+      width: 121pt;
+      height: 100%;
+      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap; }
+      .cover-page-main-team-members-list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 13pt;
+        list-style: none;
+        text-align: center; }
+        .cover-page-main-team-members-list-item {
+          font-size: 7.3pt;
+          font-weight: 400;
+          line-height: 1.31;
+          letter-spacing: -0.11px; }
+          .cover-page-main-team-members-list-item.title {
+            margin-bottom: 3pt;
+            font-size: 8pt;
+            font-weight: 600;
+            letter-spacing: normal; }
+  .cover-page-main-amount {
+    margin-bottom: 86pt; }
+    .cover-page-main-amount-header {
+      margin: 0 auto;
+      margin-bottom: 25pt;
+      padding-top: 10pt;
+      max-width: 223pt;
+      border-top: 1pt solid #000;
+      text-align: center; }
+      .cover-page-main-amount-header-title {
+        margin-bottom: 6pt;
+        font-size: 8pt;
+        font-weight: 600; }
+      .cover-page-main-amount-header-info {
+        font-size: 8pt;
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: -0.12px; }
+    .cover-page-main-amount-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .cover-page-main-amount-main-list {
+        list-style: none;
+        text-align: center; }
+        .cover-page-main-amount-main-list-item {
+          font-size: 8pt;
+          font-weight: 600; }
+          .cover-page-main-amount-main-list-item-title {
+            margin-bottom: 3.5pt; }
+  .cover-page-main-created {
+    margin: 0 auto;
+    max-width: 108pt;
+    padding-top: 8.5pt;
+    border-top: 1pt solid #000;
+    text-align: center; }
+    .cover-page-main-created-title {
+      margin-bottom: 6pt;
+      font-size: 8pt;
+      font-weight: 600; }
+    .cover-page-main-created-info {
+      font-size: 8pt;
+      font-weight: 400;
+      letter-spacing: -0.12px; }
+
+.moment-caption {
+  margin-bottom: 16pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .moment-caption-main-title {
+    margin-bottom: 3pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: -0.12px; }
+  .moment-caption-main-text {
+    max-width: 350pt;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: -0.12px; }
+  .moment-caption-chart {
+    align-self: flex-end;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: -0.12px; }
+.moment-chart {
+  padding-top: 13pt;
+  margin-bottom: 6pt;
+  text-align: center;
+  border: 1px solid #000000;
+  overflow: hidden; }
+  .moment-chart:not(:last-of-type) {
+    margin-bottom: 25pt; }
+  .moment-chart-title {
+    margin-bottom: 6pt;
+    font-size: 9.3pt;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.14px;
+    text-transform: uppercase; }
+  .moment-chart-text {
+    font-size: 8.8pt;
+    font-weight: 400;
+    letter-spacing: -0.13px; }
+  .moment-chart-chart {
+    margin: 0 auto;
+    width: 97% !important;
+    height: 99% !important; }
+  .moment-chart-legend {
+    margin: 12pt 10pt;
+    padding: 12pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .25pt solid #000000; }
+    .moment-chart-legend-item {
+      margin-right: 19pt;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center; }
+      .moment-chart-legend-item-color {
+        margin-right: 5.5pt;
+        display: inline-block;
+        height: 2pt;
+        width: 20pt; }
+        .moment-chart-legend-item-color.color-01 {
+          background-color: #07487f; }
+        .moment-chart-legend-item-color.color-02 {
+          background-color: #559a19; }
+        .moment-chart-legend-item-color.color-03 {
+          background-color: #818181; }
+      .moment-chart-legend-item-name {
+        font-size: 7.8pt;
+        font-weight: 400;
+        letter-spacing: -0.12px; }
+.moment-super {
+  margin-top: 44pt;
+  display: inline-block;
+  padding-top: 6pt;
+  border-top: .25pt solid #000000; }
+  .moment-super-item {
+    width: auto;
+    margin-bottom: 4pt;
+    font-size: 6.5pt;
+    font-weight: 400;
+    letter-spacing: -0.1px; }
+
+.evaluation-caption {
+  margin-bottom: 16pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .evaluation-caption-main-title {
+    margin-bottom: 3pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: -0.12px; }
+  .evaluation-caption-main-text {
+    max-width: 330pt;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: -0.12px; }
+  .evaluation-caption-chart {
+    align-self: flex-end;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: -0.12px; }
+.evaluation-chart {
+  padding-top: 13pt;
+  margin-bottom: 6pt;
+  text-align: center;
+  border: 1px solid #000000;
+  overflow: hidden; }
+  .evaluation-chart:not(:last-of-type) {
+    margin-bottom: 25pt; }
+  .evaluation-chart-title {
+    margin-bottom: 6pt;
+    font-size: 9.3pt;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.14px;
+    text-transform: uppercase; }
+  .evaluation-chart-text {
+    margin-bottom: 16pt;
+    font-size: 8.8pt;
+    font-weight: 400;
+    letter-spacing: -0.13px; }
+  .evaluation-chart-chart {
+    margin: 0 auto;
+    width: 97% !important;
+    height: 99% !important; }
+  .evaluation-chart-legend {
+    margin: 12pt 10pt;
+    padding: 12pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .25pt solid #000000; }
+    .evaluation-chart-legend-item {
+      margin-right: 19pt;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center; }
+      .evaluation-chart-legend-item-color {
+        margin-right: 5.5pt;
+        display: inline-block;
+        height: 2pt;
+        width: 20pt; }
+        .evaluation-chart-legend-item-color.color-01 {
+          background-color: #07487f; }
+        .evaluation-chart-legend-item-color.color-02 {
+          background-color: #559a19; }
+        .evaluation-chart-legend-item-color.color-03 {
+          background-color: #818181; }
+      .evaluation-chart-legend-item-name {
+        font-size: 7.8pt;
+        font-weight: 400;
+        letter-spacing: -0.12px; }
+.evaluation-super {
+  margin-top: 44pt;
+  display: inline-block;
+  padding-top: 6pt;
+  border-top: .25pt solid #000000; }
+  .evaluation-super-item {
+    width: auto;
+    margin-bottom: 4pt;
+    font-size: 6.5pt;
+    font-weight: 400;
+    letter-spacing: -0.1px; }
+
+.development-caption {
+  margin-bottom: 16pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end; }
+  .development-caption-main-title {
+    margin-bottom: 3pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: -0.12px; }
+  .development-caption-main-text {
+    max-width: 330pt;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: -0.12px; }
+  .development-caption-chart {
+    align-self: flex-end;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: -0.12px; }
+.development-chart {
+  padding-top: 13pt;
+  margin-bottom: 6pt;
+  text-align: center;
+  border: 1px solid #000000;
+  overflow: hidden; }
+  .development-chart:not(:last-of-type) {
+    margin-bottom: 25pt; }
+  .development-chart-title {
+    margin-bottom: 6pt;
+    font-size: 9.3pt;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.14px;
+    text-transform: uppercase; }
+  .development-chart-text {
+    margin-bottom: 16pt;
+    font-size: 8.8pt;
+    font-weight: 400;
+    letter-spacing: -0.13px; }
+  .development-chart-chart {
+    margin: 0 auto;
+    margin-top: -10pt;
+    width: 97% !important;
+    height: 99% !important; }
+  .development-chart-legend {
+    margin: 12pt 10pt;
+    padding: 12pt;
+    padding-bottom: 2pt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: .25pt solid #000000; }
+    .development-chart-legend-item {
+      margin-right: 19pt;
+      margin-bottom: 10pt;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center; }
+      .development-chart-legend-item-color {
+        margin-right: 5.5pt;
+        display: inline-block;
+        height: 2pt;
+        width: 20pt; }
+        .development-chart-legend-item-color.color-01 {
+          background-color: #07487f; }
+        .development-chart-legend-item-color.color-02 {
+          background-color: #559a19; }
+        .development-chart-legend-item-color.color-03 {
+          background-color: #f7dd31; }
+        .development-chart-legend-item-color.color-04 {
+          background-color: #ea2725; }
+      .development-chart-legend-item-name {
+        font-size: 7.8pt;
+        font-weight: 400;
+        letter-spacing: -0.12px; }
+.development-super {
+  margin-top: 44pt;
+  display: inline-block;
+  padding-top: 6pt;
+  border-top: .25pt solid #000000; }
+  .development-super-item {
+    width: auto;
+    margin-bottom: 4pt;
+    font-size: 6.5pt;
+    font-weight: 400;
+    letter-spacing: -0.1px; }
+
+.performance-caption {
+  margin-bottom: 16pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+  .performance-caption-main-title {
+    margin-bottom: 3pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: -0.12px; }
+  .performance-caption-main-text {
+    max-width: 418pt;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: -0.12px; }
+  .performance-caption-chart {
+    align-self: flex-end;
+    font-size: 8pt;
+    font-weight: 600;
+    letter-spacing: -0.12px; }
+.performance-chart {
+  padding-top: 13pt;
+  margin-bottom: 0;
+  text-align: center;
+  border: 1px solid #000000;
+  overflow: hidden; }
+  .performance-chart:not(:last-of-type) {
+    margin-bottom: 25pt; }
+  .performance-chart-title {
+    margin-bottom: 6pt;
+    font-size: 9.3pt;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.14px;
+    text-transform: uppercase; }
+  .performance-chart-text {
+    font-size: 8.8pt;
+    font-weight: 400;
+    letter-spacing: -0.13px; }
+  .performance-chart-chart {
+    margin: 0 auto;
+    margin-top: -15pt;
+    width: 95% !important;
+    height: 99% !important; }
+.performance-super {
+  margin-top: 44pt;
+  display: inline-block;
+  padding-top: 6pt;
+  border-top: .25pt solid #000000; }
+  .performance-super-item {
+    width: auto;
+    margin-bottom: 4pt;
+    font-size: 6.5pt;
+    font-weight: 400;
+    letter-spacing: -0.1px; }

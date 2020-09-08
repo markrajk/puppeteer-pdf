@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cover page</title>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+</head>
+
+<body class="moment">
+
+ <div class="moment-caption">
+  <div class="moment-caption-main">
+   <p class="moment-caption-main-title">Team Performance</p>
+   <p class="moment-caption-main-text">
+    These two charts on this page describe how the team React Native is doing at the moment.
+    These values present the average of all given reviews during the last 12 weeks.
+   </p>
+  </div>
+  <p class="moment-caption-chart">Chart 1</p>
+ </div>
+
+ <div class="moment-chart">
+  <p class="moment-chart-title">Situation at the moment</p>
+  <p class="moment-chart-text">Averages of peer to peer and team feedbacks of the period 1.9.2020 - 1.9.2020</p>
+  <div class="moment-chart-chart" id="chart-01" style="width: 900px; height: 300px;"></div>
+ </div>
+
+ <div class="moment-caption">
+  <div class="moment-caption-main">
+   <p class="moment-caption-main-text">&nbsp;</p>
+  </div>
+  <p class="moment-caption-chart">Chart 2</p>
+ </div>
+
+ <div class="moment-chart">
+  <p class="moment-chart-title">Situation at the moment</p>
+  <p class="moment-chart-text">Averages of team lead and custom feedbacks of the period 1.9.2020 - 1.9.2020</p>
+  <div class="moment-chart-chart" id="chart-02" style="width: 900px; height: 300px;"></div>
+ </div>
+
+ <div class="moment-super">
+  <p class="moment-super-item">Feeling - How do people feel working in this team?</p>
+  <p class="moment-super-item">Organizing - How is work planned and organized in this team?</p>
+ </div>
+
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript">
+  google.charts.load("current", {
+   packages: ['corechart']
+  });
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+   var data01 = google.visualization.arrayToDataTable([
+    ["Element", "Amount", {
+     role: 'style'
+    }, {
+     role: 'annotation'
+    }],
+    ["Attitude", 3.2, "rgb(7, 72, 127)", '+18%'],
+    ["Productivity", 3.8, "rgb(129, 129, 129)", '+18%'],
+    ["Teamworking", 4.5, "rgb(85, 154, 25)", '+20%'],
+    ["Feeling", 3.7, "rgb(181, 181, 181)", '+20%'],
+    ["Organizing", 3.7, "rgb(247, 171, 49)", '+20%'],
+    ["Average", 3.7, "rgb(129, 129, 129)", '+20%'],
+   ]);
+
+   var data02 = google.visualization.arrayToDataTable([
+    ["Element", "Amount", {
+     role: 'style'
+    }, {
+     role: 'annotation'
+    }],
+    ["Team lead 1", 3.2, "rgb(7, 72, 127)", '+18%'],
+    ["Team lead 2", 3.8, "rgb(129, 129, 129)", '+18%'],
+    ["Custom Q1", 4.5, "rgb(85, 154, 25)", '+20%'],
+    ["Custom Q1", 3.7, "rgb(181, 181, 181)", '+20%'],
+    ["Custom Q1", 3.7, "rgb(247, 171, 49)", '+20%'],
+   ]);
+
+   var view01 = new google.visualization.DataView(data01);
+   var view02 = new google.visualization.DataView(data02);
+
+   var options = {
+    backgroundColor: {
+     fill: 'transparent'
+    },
+    width: '100%',
+    height: 250,
+    chartArea: {
+     width: '90%',
+    },
+    bar: {
+     groupWidth: "65%"
+    },
+    legend: {
+     position: "none"
+    },
+    vAxis: {
+     baseline: 1,
+     ticks: [1, 2, 3, 4, 5]
+    }
+   };
+   var chart01 = new google.visualization.ColumnChart(document.getElementById("chart-01"));
+   var chart02 = new google.visualization.ColumnChart(document.getElementById("chart-02"));
+   chart01.draw(view01, options);
+   chart02.draw(view02, options);
+  }
+ </script>
+
+</body>
+
+</html>

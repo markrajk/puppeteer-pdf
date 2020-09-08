@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cover page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="http://localhost:3000/css/style.css">
+</head>
+
+<body class="development">
+
+  <div class="development-caption">
+    <p class="development-caption-chart">Chart 3</p>
+  </div>
+
+  <div class="development-chart">
+    <p class="development-chart-title">Situation at the moment</p>
+    <p class="development-chart-text">Averages of peer to peer and team feedbacks of the period 1.9.2020 - 1.9.2020</p>
+    <div class="development-chart-chart" id="chart-01"></div>
+    <div class="development-chart-legend">
+      <div class="development-chart-legend-item">
+        <span class="development-chart-legend-item-color color-01"></span>
+        <span class="development-chart-legend-item-name">Attitude</span>
+      </div>
+
+      <div class="development-chart-legend-item">
+        <span class="development-chart-legend-item-color color-02"></span>
+        <span class="development-chart-legend-item-name">Productivity</span>
+      </div>
+
+      <div class="development-chart-legend-item">
+        <span class="development-chart-legend-item-color color-03"></span>
+        <span class="development-chart-legend-item-name">Teamworking</span>
+      </div>
+
+      <div class="development-chart-legend-item">
+        <span class="development-chart-legend-item-color color-04"></span>
+        <span class="development-chart-legend-item-name">Teamworking</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="development-caption">
+    <p class="development-caption-chart">Chart 4</p>
+  </div>
+
+  <div class="development-chart">
+    <p class="development-chart-title">Situation at the moment</p>
+    <p class="development-chart-text">Averages of peer to peer and team feedbacks of the period 1.9.2020 - 1.9.2020</p>
+    <div class="development-chart-chart" id="chart-02"></div>
+    <div class="development-chart-legend">
+      <div class="development-chart-legend-item">
+        <span class="development-chart-legend-item-color color-01"></span>
+        <span class="development-chart-legend-item-name">How do team members feel working in this team</span>
+      </div>
+
+      <div class="development-chart-legend-item">
+        <span class="development-chart-legend-item-color color-03"></span>
+        <span class="development-chart-legend-item-name">How work is organized in this team</span>
+      </div>
+
+      <div class="development-chart-legend-item">
+        <span class="development-chart-legend-item-color color-04"></span>
+        <span class="development-chart-legend-item-name">What do team members think about the team lead Martin
+          Andrew</span>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data01 = google.visualization.arrayToDataTable([
+        ['Year', 'Attitude', 'Productivity', 'Teamworking', 'Average'],
+        ['February', 1, 1, 1, 1],
+        ['March', 2, 2.2, 1.5, 1.8],
+        ['April', 2.5, 2.3, 2, 2.8],
+        ['May', 3, 2.8, 3, 4],
+        ['June', 4, 3.2, 3, 2.6],
+        ['July', 3.4, 4, 4, 3],
+      ]);
+
+      var data02 = google.visualization.arrayToDataTable([
+        ['Year', 'Attitude', 'Productivity', 'Teamworking'],
+        ['February', 1, 1, 1],
+        ['March', 2, 2.2, 1.5],
+        ['April', 2.5, 2.3, 2],
+        ['May', 3, 2.8, 3],
+        ['June', 4, 3.2, 3],
+        ['July', 3.4, 4, 4],
+      ]);
+
+      var options01 = {
+        title: '',
+        height: 230,
+        chartArea: {
+          height: '80%',
+          width: '90%',
+        },
+        curveType: 'function',
+        legend: {
+          position: 'none'
+        },
+        vAxis: {
+          baseline: 1,
+          ticks: [1, 2, 3, 4, 5]
+        },
+        colors: ['rgb(7, 72, 127)', 'rgb(85, 154, 25)', 'rgb(247, 221, 49)', 'rgb(234, 39, 37)'],
+        backgroundColor: 'transparent'
+      };
+
+      var options02 = {
+        title: '',
+        height: 230,
+        chartArea: {
+          height: '80%',
+          width: '90%',
+        },
+        curveType: 'function',
+        legend: {
+          position: 'none'
+        },
+        vAxis: {
+          baseline: 1,
+          ticks: [1, 2, 3, 4, 5]
+        },
+        colors: ['rgb(7, 72, 127)', 'rgb(247, 221, 49)', 'rgb(234, 39, 37)'],
+        backgroundColor: 'transparent'
+      };
+
+      var chart01 = new google.visualization.LineChart(document.getElementById('chart-01'));
+      var chart02 = new google.visualization.LineChart(document.getElementById('chart-02'));
+
+      chart01.draw(data01, options01);
+      chart02.draw(data02, options02);
+    }
+  </script>
+
+</body>
+
+</html>

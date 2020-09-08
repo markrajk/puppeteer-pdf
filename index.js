@@ -33,7 +33,7 @@ app.use(express.static('public'));
 
 app.get('/', async function (req, res) {
   //const filePath = path.join(process.cwd(), 'templates', 'test.html');
-  const filePath = path.join(process.cwd(), 'templates', 'test-charts.html');
+  const filePath = path.join(process.cwd(), 'templates', 'development.html');
   const html = await fs.readFileSync(filePath, 'utf-8');
   const browser = await puppeteer.launch({
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -45,41 +45,34 @@ app.get('/', async function (req, res) {
   await page.emulateMediaType('screen');
 
   await page.pdf({
-    path: 'test-charts.pdf',
+    path: 'development.pdf',
     format: 'A4',
     printBackground: true,
     displayHeaderFooter: true,
-    headerTemplate: '<span style="display:none!important">Header 1</span>',
+    headerTemplate: '<span style="display:none!important"></span>',
     footerTemplate: `
     <footer 
-    style="margin:10px 60px 0!important;
-    margin-top: 50pt!important;
-    position: relative;
+    style="margin:0 60px 0!important;
+    margin-bottom: 30px!important;
     width: 100%!important; 
-    font-size: 7pt; 
-    display: flex; 
-    align-items: center; 
-    justify-content: 
-    space-between; 
-    color: rgb(78, 78, 78);
-    border-top: 1pt solid rgb(234, 234, 234)!important;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: -0.12px;
+    display: flex;
+    align-items: center;
+    justify-content:
+    space-between;
+    color: #000;
     ">
-    <p><span style="font-weight: 700;">Peter Smith -</span> Javascript Developer</p>
-    <p><span 
-    style="font-weight: 700;
-    position: absolute!important:
-    top: 50%!important;
-    left: 50%!important;
-    transform: translate(-50%, -50%)!important;  
-    ">Example Company</span></p>
-    <p>15.8.2020</p>
+    <p>Team Report - Team React Native</p>
+    <p>Page 1/5</p>
    </footer>
     `,
     margin: {
-      top: '60px',
-      bottom: '60px',
-      right: '60px',
-      left: '60px',
+      top: '0',
+      bottom: '83px',
+      right: '0',
+      left: '0',
     },
   });
 
@@ -89,7 +82,7 @@ app.get('/', async function (req, res) {
 
   //res.send('HELLO');
   //res.sendFile(path.join(__dirname + '/templates/test.html'));
-  res.sendFile(path.join(__dirname + '/templates/test-charts.html'));
+  res.sendFile(path.join(__dirname + '/templates/development.html'));
 });
 
 app.listen(3000, () => {

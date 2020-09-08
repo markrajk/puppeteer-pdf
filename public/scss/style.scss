@@ -10,9 +10,19 @@ canvas {
 
 body {
  position: relative;
- // padding: 60pt;
- padding-bottom: 100pt;
- font-family: 'Roboto', sans-serif;
+ padding: 70pt 60pt;
+ font-family: 'Inter', sans-serif;
+
+ &.cover-page,
+ &.moment {
+  padding: 89pt 63pt;
+  padding-bottom: 0;
+  color: #000000;
+ }
+
+ & .development {
+  padding-top: 79pt;
+ }
 }
 
 .header {
@@ -194,6 +204,729 @@ body {
 
   & span {
    font-weight: bold;
+  }
+ }
+}
+
+.size-test {
+ min-height: 701pt;
+ height: 100%;
+ width: 100%;
+ border: solid 1px #707070;
+ background-color: #f7f7f7;
+
+ &-title {
+  padding-top: 119pt;
+  font-size: 36pt;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4e4e4e;
+ }
+}
+
+.cover-page {
+ 
+ &-header {
+  margin: 0 auto;
+  max-width: 468pt;
+  text-align: center;
+
+  &-company {
+   margin-bottom: 27pt;
+   padding-top: 3.5pt;
+   position: relative;
+   border-top: 1pt solid #000000;
+
+   &::before {
+    content: '';
+    position: absolute;
+    top:-3pt;
+    left: 0;
+    display: block;
+    width: 100%;
+    border-top: 1pt solid #000000;
+   }
+   &-title {
+    margin-bottom: 4pt;
+    font-size: 12pt;
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase;
+   }
+ 
+   &-info {
+    font-size: 10pt;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: normal;
+   }
+  }
+
+  &-type {
+   margin: 0 auto;
+   max-width: 165pt;
+   padding-top: 5.5pt;
+   padding-bottom: 6pt;
+   margin-bottom: 46pt;
+   border-top: 1pt solid #000000;
+   border-bottom: 1pt solid #000000;
+
+   &-title {
+    margin-bottom: 4pt;
+    font-size: 15pt;
+    font-weight: 700;
+   }
+
+   &-info {
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.12px;
+   }
+  }
+
+  &-team {
+   max-width: 224pt;
+   margin: 0 auto;
+   margin-bottom: 55pt;
+   padding-top: 7pt;
+   padding-bottom: 7pt;
+   border-top: 1pt solid #000000;
+   border-bottom: 1pt solid #000000;
+
+   &-title {
+    margin-bottom: 4pt;
+    font-size: 18pt;
+    font-weight: 700;
+   }
+
+   &-info {
+    font-size: 8pt;
+    font-weight: 400;
+    letter-spacing: -0.12px;
+   }
+  }
+ }
+
+ &-main {
+  width: 100%;
+
+  &-team {
+   margin: 0 auto;
+   margin-bottom: 18pt;
+   width: 100%;
+   max-width: 400pt;
+   height: 160pt;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+
+   &-info {
+    width: 121pt;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &-list {
+     margin-bottom: 13pt;
+     list-style: none;
+        text-align: center;
+
+     &-item {
+      font-size: 7.3pt;
+      font-weight: 400;
+      line-height: 1.31;
+      letter-spacing: -0.11px;
+
+      &.title {
+       margin-bottom: 3pt;
+       font-size: 8pt;
+       font-weight: 600;
+       letter-spacing: normal;
+      }
+     }
+    }
+   }
+
+   &-members {
+    width: 121pt;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    &-list {
+     height: 100%;
+     display:flex;
+     flex-direction:column;
+     flex-wrap:wrap;
+     margin-bottom: 13pt;
+     list-style: none;
+     text-align: center;
+
+     &-item {
+      font-size: 7.3pt;
+      font-weight: 400;
+      line-height: 1.31;
+      letter-spacing: -0.11px;
+
+      &.title {
+       margin-bottom: 3pt;
+       font-size: 8pt;
+       font-weight: 600;
+       letter-spacing: normal;
+      }
+     }
+    }
+   }
+  }
+
+  &-amount {
+   margin-bottom: 86pt;
+
+   &-header {
+    margin: 0 auto;
+    margin-bottom: 25pt;
+    padding-top: 10pt;
+    max-width: 223pt;
+    border-top: 1pt solid #000;
+    text-align: center;
+
+    &-title {
+     margin-bottom: 6pt;
+     font-size: 8pt;
+     font-weight: 600;
+    }
+
+    &-info {
+     font-size: 8pt;
+     font-weight: 400;
+     line-height: 1.25;
+     letter-spacing: -0.12px;
+    }
+   }
+
+   &-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-list {
+     list-style: none;
+     text-align: center;
+
+     &-item {
+      font-size: 8pt;
+      font-weight: 600;
+
+      &-title {
+       margin-bottom: 3.5pt;
+      }
+     }
+    }
+   }
+  }
+
+  &-created {
+   margin: 0 auto;
+   max-width: 108pt;
+   padding-top: 8.5pt;
+   border-top: 1pt solid #000;
+   text-align: center;
+
+   &-title {
+    margin-bottom: 6pt;
+    font-size: 8pt;
+    font-weight: 600;
+   }
+
+   &-info {
+    font-size: 8pt;
+    font-weight: 400;
+    letter-spacing: -0.12px;
+   }
+  }
+ }
+}
+
+.moment {
+
+ &-caption {
+  margin-bottom: 16pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &-main {
+   &-title {
+    margin-bottom: 3pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: -0.12px;
+   }
+
+   &-text {
+    max-width: 350pt;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: -0.12px;
+   }
+  }
+
+  &-chart {
+   align-self: flex-end;
+   font-size: 8pt;
+   font-weight: 600;
+   letter-spacing: -0.12px;
+  }
+ }
+
+ &-chart {
+  padding-top: 13pt;
+  // padding-bottom: 23pt;
+  margin-bottom: 6pt;
+  text-align: center;
+  border: 1px solid #000000;
+  overflow: hidden;
+
+  &:not(:last-of-type) {
+   margin-bottom: 25pt;
+  }
+
+  &-title {
+   margin-bottom: 6pt;
+   font-size: 9.3pt;
+   font-weight: 600;
+   line-height: 1;
+   letter-spacing: -0.14px;
+   text-transform: uppercase;
+  }
+
+  &-text {
+   font-size: 8.8pt;
+   font-weight: 400;
+   letter-spacing: -0.13px;
+  }
+
+  &-chart {
+   margin: 0 auto;
+   width: 97%!important;
+   height: 99%!important;
+  }
+
+  &-legend {
+   margin: 12pt 10pt;
+   padding: 12pt;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: .25pt solid #000000;
+
+   &-item {
+    margin-right: 19pt;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &-color {
+     margin-right: 5.5pt;
+     display: inline-block;
+     height: 2pt;
+     width: 20pt;
+
+     &.color-01 {
+      background-color: rgb(7, 72, 127);
+     }
+
+     &.color-02 {
+      background-color: rgb(85, 154, 25);
+     }
+
+     &.color-03 {
+      background-color: rgb(129, 129, 129);
+     }
+    }
+
+    &-name {
+     font-size: 7.8pt;
+     font-weight: 400;
+     letter-spacing: -0.12px;
+    }
+   }
+  }
+ }
+
+ &-super {
+  margin-top: 44pt;
+  display: inline-block;
+  padding-top: 6pt;
+  border-top: .25pt solid #000000;
+
+  &-item {
+   width: auto;
+   margin-bottom: 4pt;
+   font-size: 6.5pt;
+   font-weight: 400;
+   letter-spacing: -0.1px;
+  }
+ }
+}
+
+
+.evaluation {
+
+ &-caption {
+  margin-bottom: 16pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &-main {
+   &-title {
+    margin-bottom: 3pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: -0.12px;
+   }
+
+   &-text {
+    max-width: 330pt;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: -0.12px;
+   }
+  }
+
+  &-chart {
+   align-self: flex-end;
+   font-size: 8pt;
+   font-weight: 600;
+   letter-spacing: -0.12px;
+  }
+ }
+
+ &-chart {
+  padding-top: 13pt;
+  // padding-bottom: 23pt;
+  margin-bottom: 6pt;
+  text-align: center;
+  border: 1px solid #000000;
+  overflow: hidden;
+
+  &:not(:last-of-type) {
+   margin-bottom: 25pt;
+  }
+
+  &-title {
+   margin-bottom: 6pt;
+   font-size: 9.3pt;
+   font-weight: 600;
+   line-height: 1;
+   letter-spacing: -0.14px;
+   text-transform: uppercase;
+  }
+
+  &-text {
+   margin-bottom: 16pt;
+   font-size: 8.8pt;
+   font-weight: 400;
+   letter-spacing: -0.13px;
+  }
+
+  &-chart {
+   margin: 0 auto;
+   // margin: 15pt;
+   // margin-bottom: 0;
+   width: 97%!important;
+   height: 99%!important;
+  }
+
+  &-legend {
+   margin: 12pt 10pt;
+   padding: 12pt;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: .25pt solid #000000;
+
+   &-item {
+    margin-right: 19pt;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &-color {
+     margin-right: 5.5pt;
+     display: inline-block;
+     height: 2pt;
+     width: 20pt;
+
+     &.color-01 {
+      background-color: rgb(7, 72, 127);
+     }
+
+     &.color-02 {
+      background-color: rgb(85, 154, 25);
+     }
+
+     &.color-03 {
+      background-color: rgb(129, 129, 129);
+     }
+    }
+
+    &-name {
+     font-size: 7.8pt;
+     font-weight: 400;
+     letter-spacing: -0.12px;
+    }
+   }
+  }
+ }
+
+ &-super {
+  margin-top: 44pt;
+  display: inline-block;
+  padding-top: 6pt;
+  border-top: .25pt solid #000000;
+
+  &-item {
+   width: auto;
+   margin-bottom: 4pt;
+   font-size: 6.5pt;
+   font-weight: 400;
+   letter-spacing: -0.1px;
+  }
+ }
+}
+
+.development {
+
+ &-caption {
+  margin-bottom: 16pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  &-main {
+   &-title {
+    margin-bottom: 3pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: -0.12px;
+   }
+
+   &-text {
+    max-width: 330pt;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: -0.12px;
+   }
+  }
+
+  &-chart {
+   align-self: flex-end;
+   font-size: 8pt;
+   font-weight: 600;
+   letter-spacing: -0.12px;
+  }
+ }
+
+ &-chart {
+  padding-top: 13pt;
+  // padding-bottom: 23pt;
+  margin-bottom: 6pt;
+  text-align: center;
+  border: 1px solid #000000;
+  overflow: hidden;
+
+  &:not(:last-of-type) {
+   margin-bottom: 25pt;
+  }
+
+  &-title {
+   margin-bottom: 6pt;
+   font-size: 9.3pt;
+   font-weight: 600;
+   line-height: 1;
+   letter-spacing: -0.14px;
+   text-transform: uppercase;
+  }
+
+  &-text {
+   margin-bottom: 16pt;
+   font-size: 8.8pt;
+   font-weight: 400;
+   letter-spacing: -0.13px;
+  }
+
+  &-chart {
+   margin: 0 auto;
+   margin-top: -10pt;
+   // margin: 15pt;
+   // margin-bottom: 0;
+   width: 97%!important;
+   height: 99%!important;
+  }
+
+  &-legend {
+   margin: 12pt 10pt;
+   padding: 12pt;
+   padding-bottom: 2pt;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   border: .25pt solid #000000;
+
+   &-item {
+    margin-right: 19pt;
+    margin-bottom: 10pt;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &-color {
+     margin-right: 5.5pt;
+     display: inline-block;
+     height: 2pt;
+     width: 20pt;
+
+     &.color-01 {
+      background-color: rgb(7, 72, 127);
+     }
+
+     &.color-02 {
+      background-color: rgb(85, 154, 25);
+     }
+
+     &.color-03 {
+      background-color: rgb(247, 221, 49);
+     }
+
+     &.color-04 {
+      background-color: rgb(234, 39, 37);
+     }
+
+    }
+
+    &-name {
+     font-size: 7.8pt;
+     font-weight: 400;
+     letter-spacing: -0.12px;
+    }
+   }
+  }
+ }
+
+ &-super {
+  margin-top: 44pt;
+  display: inline-block;
+  padding-top: 6pt;
+  border-top: .25pt solid #000000;
+
+  &-item {
+   width: auto;
+   margin-bottom: 4pt;
+   font-size: 6.5pt;
+   font-weight: 400;
+   letter-spacing: -0.1px;
+  }
+ }
+}
+
+.performance {
+
+ &-caption {
+  margin-bottom: 16pt;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &-main {
+   &-title {
+    margin-bottom: 3pt;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: -0.12px;
+   }
+
+   &-text {
+    max-width: 418pt;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.38;
+    letter-spacing: -0.12px;
+   }
+  }
+
+  &-chart {
+   align-self: flex-end;
+   font-size: 8pt;
+   font-weight: 600;
+   letter-spacing: -0.12px;
+  }
+ }
+
+ &-chart {
+  padding-top: 13pt;
+  // padding-bottom: 23pt;
+  margin-bottom: 0;
+  text-align: center;
+  border: 1px solid #000000;
+  overflow: hidden;
+
+  &:not(:last-of-type) {
+   margin-bottom: 25pt;
+  }
+
+  &-title {
+   margin-bottom: 6pt;
+   font-size: 9.3pt;
+   font-weight: 600;
+   line-height: 1;
+   letter-spacing: -0.14px;
+   text-transform: uppercase;
+  }
+
+  &-text {
+   font-size: 8.8pt;
+   font-weight: 400;
+   letter-spacing: -0.13px;
+  }
+
+  &-chart {
+   margin: 0 auto;
+   margin-top: -15pt;
+   width: 95%!important;
+   height: 99%!important;
+  }
+ }
+
+ &-super {
+  margin-top: 44pt;
+  display: inline-block;
+  padding-top: 6pt;
+  border-top: .25pt solid #000000;
+
+  &-item {
+   width: auto;
+   margin-bottom: 4pt;
+   font-size: 6.5pt;
+   font-weight: 400;
+   letter-spacing: -0.1px;
   }
  }
 }
