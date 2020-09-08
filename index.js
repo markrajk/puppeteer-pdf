@@ -30,10 +30,8 @@ app.use(express.static('public'));
 //     console.log(e);
 //   }
 // })();
-
-app.get('/', async function (req, res) {
-  //const filePath = path.join(process.cwd(), 'templates', 'test.html');
-  const filePath = path.join(process.cwd(), 'templates', 'development.html');
+async function generatePdfPage(fileName) {
+  const filePath = path.join(process.cwd(), 'templates', `${fileName}.html`);
   const html = await fs.readFileSync(filePath, 'utf-8');
   const browser = await puppeteer.launch({
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -45,7 +43,7 @@ app.get('/', async function (req, res) {
   await page.emulateMediaType('screen');
 
   await page.pdf({
-    path: 'development.pdf',
+    path: `pdfs/${fileName}.pdf`,
     format: 'A4',
     printBackground: true,
     displayHeaderFooter: true,
@@ -78,13 +76,46 @@ app.get('/', async function (req, res) {
 
   console.log('done');
   await browser.close();
-  // process.exit();
+}
 
-  //res.send('HELLO');
-  //res.sendFile(path.join(__dirname + '/templates/test.html'));
+app.get('/', async function (req, res) {
+  res.sendFile(path.join(__dirname + '/templates/index.html'));
+});
+
+app.get('/cover-page', async function (req, res) {
+  generatePdfPage('cover-page');
+  res.sendFile(path.join(__dirname + '/templates/cover-page.html'));
+});
+
+app.get('/at-the-moment', async function (req, res) {
+  generatePdfPage('at-the-moment');
+  res.sendFile(path.join(__dirname + '/templates/at-the-moment.html'));
+});
+
+app.get('/development', async function (req, res) {
+  generatePdfPage('development');
   res.sendFile(path.join(__dirname + '/templates/development.html'));
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.get('/team-members-performance-01', async function (req, res) {
+  generatePdfPage('team-members-performance-01');
+  res.sendFile(
+    path.join(__dirname + '/templates/team-members-performance-01.html')
+  );
+});
+
+app.get('/team-members-performance-02', async function (req, res) {
+  generatePdfPage('team-members-performance-02');
+  res.sendFile(
+    path.join(__dirname + '/templates/team-members-performance-02.html')
+  );
+});
+
+app.get('/self-evaluation', async function (req, res) {
+  generatePdfPage('self-evaluation');
+  res.sendFile(path.join(__dirname + '/templates/self-evaluation.html'));
+});
+
+app.listen(5000, () => {
+  console.log('Server is running on port 5000');
 });
